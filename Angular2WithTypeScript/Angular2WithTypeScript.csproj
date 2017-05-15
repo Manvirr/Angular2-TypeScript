@@ -103,7 +103,6 @@
     <Content Include="src\app\Tasks\Tasks.component.html" />
     <Content Include="src\systemjs-angular-loader.js" />
     <Content Include="src\tsconfig.json" />
-    <Content Include="package.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
