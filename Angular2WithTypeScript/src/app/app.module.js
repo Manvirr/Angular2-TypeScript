@@ -8,8 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var router_1 = require("@angular/router");
+var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
-var Tasks_Component_1 = require("./Tasks/Tasks.Component");
+var TasksService_1 = require("./Services/TasksService/TasksService");
+var Playground_component_1 = require("./Playground/Playground.component");
+var Other_component_1 = require("./Other/Other.component");
+var appRoutes = [
+    { path: 'Playground', component: Playground_component_1.PlayGroundComponent },
+    { path: 'Other', component: Other_component_1.OtherComponent }
+];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -17,9 +25,10 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, Tasks_Component_1.TasksComponent],
-        bootstrap: [app_component_1.AppComponent]
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, router_1.RouterModule.forRoot(appRoutes)],
+        declarations: [app_component_1.AppComponent, Playground_component_1.PlayGroundComponent, Other_component_1.OtherComponent],
+        bootstrap: [app_component_1.AppComponent],
+        providers: [TasksService_1.TasksService]
     })
 ], AppModule);
 exports.AppModule = AppModule;

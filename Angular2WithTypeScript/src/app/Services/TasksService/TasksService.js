@@ -7,16 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var TasksComponent = (function () {
-    function TasksComponent() {
+var TasksService = (function () {
+    function TasksService() {
+        this.tasks = ["First Task", "Second Task", "Third Task"];
     }
-    return TasksComponent;
+    TasksService.prototype.getTasks = function () {
+        return this.tasks;
+    };
+    TasksService.prototype.addTask = function (task) {
+        this.tasks.push(task);
+    };
+    return TasksService;
 }());
-TasksComponent = __decorate([
-    core_1.Component({
-        selector: 'tasks',
-        templateUrl: './Tasks.component.html'
-    })
-], TasksComponent);
-exports.TasksComponent = TasksComponent;
-//# sourceMappingURL=Tasks.Component.js.map
+TasksService = __decorate([
+    core_1.Injectable()
+], TasksService);
+exports.TasksService = TasksService;
+//# sourceMappingURL=TasksService.js.map

@@ -1,0 +1,39 @@
+﻿<h3 [class.red]="true">Tasks will appear here</h3>
+<h3 [class.red]="toggle">Tasks will appear here</h3>
+<h3 [ngClass]="{red:true, blue:false}">Tasks will appear here</h3> <!--Use ngclass to set multiple classes -->
+<h3 [ngClass]="{red:toggle, blue:!toggle}" *ngIf="true">Tasks will appear here</h3> 
+<h3 *ngIf="show">Tasks will appear here</h3> 
+<ul>
+    <li *ngFor="let task of tasks">
+        {{task}}
+    </li>
+</ul>
+<button (click)="doThis()">Click</button> <!--Like 'click', you can also use 'hover', 'mouseenter', 'mouseleave' etc-->
+<input value="{{myNumber}}" (keyup)="myNumber=$event.target.value" />
+<input [value]="myNumber" /><br />
+<span>{{tasks | json}}</span><br />
+<input [(ngModel)]="sample"> <!-- This is a two way binding. on render it will dispay 'sample' value and when you type, it will assign that text to 'sample'
+                                 Please note, to use ngModel - add 'FormsModule' to app.module as shown below -
+                                    import { FormsModule } from '@angular/forms';
+                                    @NgModule({
+                                               imports: [BrowserModule, FormsModule] 
+                                 -->
+                                  
+<span>{{sample}}</span><br /><br />
+
+<!--READ CUSTOM SERVICE-->
+<label>Enter new Task</label>
+<input [(ngModel)]="newTask"><br />
+<button (click)="tasksService.addTask(newTask)" style="width:100px;">Add Task</button>
+<ul>
+    <li *ngFor="let task of tasksService.getTasks()">
+        {{task}}
+    </li>
+</ul>
+
+
+
+<!-- Structural Directives
+    1) *ngIf
+    2)*ngFor
+-->
