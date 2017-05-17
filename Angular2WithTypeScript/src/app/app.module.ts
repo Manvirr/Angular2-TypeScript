@@ -13,7 +13,7 @@ import { PlayGroundComponent } from './Playground/Playground.component';
 
 import { OtherComponent } from './Other/Other.component'
 
-import { Http, Response } from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 const appRoutes: Routes = [
     { path: 'Playground', component: PlayGroundComponent },
@@ -21,7 +21,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
+    imports: [BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(appRoutes)],
     declarations: [AppComponent, PlayGroundComponent, OtherComponent],
     bootstrap: [AppComponent],
     providers: [TasksService]

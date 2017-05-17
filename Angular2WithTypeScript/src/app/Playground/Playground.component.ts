@@ -1,4 +1,4 @@
-﻿import { Component } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { TasksService } from '../Services/TasksService/TasksService'
 
 @Component({
@@ -7,7 +7,7 @@ import { TasksService } from '../Services/TasksService/TasksService'
     styles: [".red{color:red;}", ".blue{color:blue;}"]    
 })
 
-export class PlayGroundComponent {
+export class PlayGroundComponent implements OnInit {
     toggle: boolean = false;
     show: boolean = false;
     tasks: Array<string> = ['First Task', 'Second Task'];
@@ -19,8 +19,10 @@ export class PlayGroundComponent {
     }
 
     newTask: string = "";
-    constructor(public tasksService: TasksService) {
-            
+    constructor(public tasksService: TasksService) { }
+
+    ngOnInit() {
+        this.tasksService.getTasks();
     }
 
     

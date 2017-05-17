@@ -30,7 +30,12 @@
         {{task}}
     </li>
 </ul>
-
+<h4>Tasks from Http</h4>
+<ul>
+    <li *ngFor="let task of tasksService.tasks">
+        {{task.title}} + "," + {{task.completed}}
+    </li>
+</ul>
 
 
 <!-- Structural Directives

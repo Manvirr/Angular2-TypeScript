@@ -24,6 +24,9 @@ var PlayGroundComponent = (function () {
     PlayGroundComponent.prototype.doThis = function () {
         this.myNumber = 200;
     };
+    PlayGroundComponent.prototype.ngOnInit = function () {
+        this.tasksService.getTasks();
+    };
     return PlayGroundComponent;
 }());
 PlayGroundComponent = __decorate([

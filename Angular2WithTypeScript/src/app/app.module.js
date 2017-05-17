@@ -14,6 +14,7 @@ var app_component_1 = require("./app.component");
 var TasksService_1 = require("./Services/TasksService/TasksService");
 var Playground_component_1 = require("./Playground/Playground.component");
 var Other_component_1 = require("./Other/Other.component");
+var http_1 = require("@angular/http");
 var appRoutes = [
     { path: 'Playground', component: Playground_component_1.PlayGroundComponent },
     { path: 'Other', component: Other_component_1.OtherComponent }
@@ -25,7 +26,7 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, router_1.RouterModule.forRoot(appRoutes)],
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, router_1.RouterModule.forRoot(appRoutes)],
         declarations: [app_component_1.AppComponent, Playground_component_1.PlayGroundComponent, Other_component_1.OtherComponent],
         bootstrap: [app_component_1.AppComponent],
         providers: [TasksService_1.TasksService]

@@ -106,6 +106,7 @@
     <Content Include="src\app\Playground\Playground.component.html" />
     <Content Include="src\systemjs-angular-loader.js" />
     <Content Include="src\tsconfig.json" />
+    <Content Include="src\tasks.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
