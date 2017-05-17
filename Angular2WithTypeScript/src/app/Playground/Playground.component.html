@@ -21,12 +21,12 @@
                                   
 <span>{{sample}}</span><br /><br />
 
-<!--READ CUSTOM SERVICE-->
+<!--RELATED TO CUSTOM SERVICE-->
 <label>Enter new Task</label>
 <input [(ngModel)]="newTask"><br />
-<button (click)="tasksService.addTask(newTask)" style="width:100px;">Add Task</button>
+<button (click)="tasksService.addDummyTask(newTask)" style="width:100px;">Add Task</button>
 <ul>
-    <li *ngFor="let task of tasksService.getTasks()">
+    <li *ngFor="let task of tasksService.getDummyTasks()">
         {{task}}
     </li>
 </ul>

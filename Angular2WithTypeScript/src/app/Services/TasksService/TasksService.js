@@ -9,13 +9,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var TasksService = (function () {
     function TasksService() {
-        this.tasks = ["First Task", "Second Task", "Third Task"];
+        this.dummyTasks = ["First Task", "Second Task", "Third Task"];
     }
-    TasksService.prototype.getTasks = function () {
-        return this.tasks;
+    TasksService.prototype.getDummyTasks = function () {
+        return this.dummyTasks;
     };
-    TasksService.prototype.addTask = function (task) {
-        this.tasks.push(task);
+    TasksService.prototype.addDummyTask = function (task) {
+        this.dummyTasks.push(task);
     };
     return TasksService;
 }());

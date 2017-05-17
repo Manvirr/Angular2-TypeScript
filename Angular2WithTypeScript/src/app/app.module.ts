@@ -13,6 +13,8 @@ import { PlayGroundComponent } from './Playground/Playground.component';
 
 import { OtherComponent } from './Other/Other.component'
 
+import { Http, Response } from '@angular/http';
+
 const appRoutes: Routes = [
     { path: 'Playground', component: PlayGroundComponent },
     { path: 'Other', component: OtherComponent }

@@ -2,13 +2,15 @@
 
 @Injectable()
 export class TasksService {
-    tasks = ["First Task", "Second Task", "Third Task"];
+    dummyTasks = ["First Task", "Second Task", "Third Task"];
 
-    getTasks(): Array<string>{
-        return this.tasks;
+    getDummyTasks(): Array<string>{
+        return this.dummyTasks;
     }
 
-    addTask(task: string) {
-        this.tasks.push(task);
+    addDummyTask(task: string) {
+        this.dummyTasks.push(task);
     }
+
+
 }
